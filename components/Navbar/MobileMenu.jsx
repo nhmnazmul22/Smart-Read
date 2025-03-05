@@ -1,9 +1,12 @@
 "use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 
 const MobileMenu = () => {
+  const pathname = usePathname();
   const menuItemsRef = useRef(null);
 
   const handleMobileMenu = () => {
@@ -26,20 +29,40 @@ const MobileMenu = () => {
           ref={menuItemsRef}
           className="flex flex-col gap-2 justify-start items-center w-[200px] bg-white absolute top-[60px] right-[-300px] shadow-lg py-5 px-3 duration-300"
         >
-          <li className="mobile-menu-items">
+          <li
+            className={`mobile-menu-items ${
+              pathname === "/" && "bg-[#5e17eb] text-white"
+            }`}
+          >
             <Link href="/">Home</Link>
           </li>
-          <li className="mobile-menu-items">
-            <Link href="/">Popular Post</Link>
+          <li
+            className={`mobile-menu-items ${
+              pathname === "/blogs" && "bg-[#5e17eb] text-white"
+            }`}
+          >
+            <Link href="/blogs">Blogs</Link>
           </li>
-          <li className="mobile-menu-items">
-            <Link href="/">Posts</Link>
+          <li
+            className={`mobile-menu-items ${
+              pathname === "/popular-blogs" && "bg-[#5e17eb] text-white"
+            }`}
+          >
+            <Link href="/popular-blogs">Popular Blogs</Link>
           </li>
-          <li className="mobile-menu-items">
-            <Link href="/">About Us</Link>
+          <li
+            className={`mobile-menu-items ${
+              pathname === "/about-us" && "bg-[#5e17eb] text-white"
+            }`}
+          >
+            <Link href="/about-us">About Us</Link>
           </li>
-          <li className="mobile-menu-items">
-            <Link href="/">Contact Us</Link>
+          <li
+            className={`mobile-menu-items ${
+              pathname === "/contact-us" && "bg-[#5e17eb] text-white"
+            }`}
+          >
+            <Link href="/contact-us">Contact Us</Link>
           </li>
         </ul>
       </div>

@@ -49,9 +49,9 @@ const Footer = () => {
             <SidebarPost className="text-base" />
           </div>
         </div>
-        <div className="flex justify-between items-center pt-10 pb-5 text-[12px] font-medium">
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-10 pb-5 text-[12px] font-medium">
           <Link href="/">
-            Crafted with ❤ by{" "}
+            Crafted with ❤ by
             <span className="text-[#5e17eb]">Nhm Develop Solution</span>
           </Link>
           <ul className="flex gap-3 uppercase">

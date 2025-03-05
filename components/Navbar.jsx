@@ -1,11 +1,16 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import MobileMenu from "./Navbar/MobileMenu";
 import SearchForm from "./Navbar/SearchForm";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
+
   return (
-    <nav className=" bg-white shadow-md sticky">
+    <nav className=" bg-white shadow-md sticky top-0 z-[9999]">
       <div className="container">
         <div className="flex-between h-[80px]">
           <Link href="/">
@@ -19,19 +24,39 @@ const Navbar = () => {
           </Link>
           <div className="flex justify-end items-center gap-3 lg:gap-10">
             <ul className="hidden md:flex gap-5 justify-start items-center">
-              <li className="menu-items flex items-center gap-2 cursor-pointer">
+              <li
+                className={`menu-items ${
+                  pathname === "/" && "bg-[#5e17eb] text-white"
+                }`}
+              >
                 <Link href="/">Home</Link>
               </li>
-              <li className="menu-items">
-                <Link href="/">Popular Post</Link>
+              <li
+                className={`menu-items ${
+                  pathname === "/blogs" && "bg-[#5e17eb] text-white"
+                }`}
+              >
+                <Link href="/blogs">Blogs</Link>
               </li>
-              <li className="menu-items">
-                <Link href="/">Posts</Link>
+              <li
+                className={`menu-items ${
+                  pathname === "/popular-blogs" && "bg-[#5e17eb] text-white"
+                }`}
+              >
+                <Link href="/">Popular Blogs</Link>
               </li>
-              <li className="menu-items">
+              <li
+                className={`menu-items ${
+                  pathname === "/about-us" && "bg-[#5e17eb] text-white"
+                }`}
+              >
                 <Link href="/">About Us</Link>
               </li>
-              <li className="menu-items">
+              <li
+                className={`menu-items ${
+                  pathname === "/contact-us" && "bg-[#5e17eb] text-white"
+                }`}
+              >
                 <Link href="/">Contact Us</Link>
               </li>
             </ul>
