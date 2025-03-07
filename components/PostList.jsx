@@ -7,7 +7,7 @@ const PostList = () => {
   return (
     <div className="col-span-12 shadow-md mb-5 md:mb-0 p-5 rounded-xl bg-white">
       <div className="flex flex-col md:flex-row">
-        <Link href="/" className="min-w-[300px]">
+        <Link href="/blogs/technology/1" className="min-w-[300px]">
           <Image
             src="/post.png"
             width={3400}
@@ -18,7 +18,7 @@ const PostList = () => {
         </Link>
         <div className="bg-white px-5 py-3 rounded-b-xl">
           <Link
-            href="/"
+            href="/blogs/technology/"
             className="flex gap-2 justify-center items-center bg-[#eff1f4] px-3 py-2 w-[130px] text-black text-sm"
           >
             <FaHashtag className="text-[#5e17eb] text-xl" />
@@ -28,7 +28,7 @@ const PostList = () => {
             href="/"
             className="mt-3 mb-2 text-2xl sm:text-3xl font-semibold hover:text-[#5e17eb] cursor-pointer"
           >
-            <Link href="/">
+            <Link href="/blogs/technology/1">
               Empowering Healthcare Industry: How Virtual Reality
             </Link>
           </h2>

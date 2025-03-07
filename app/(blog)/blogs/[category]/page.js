@@ -1,7 +1,10 @@
 import PostList from "@/components/PostList";
 import Sidebar from "@/components/Sidebar";
 
-const page = () => {
+const Page = async ({ params }) => {
+  const { category } = await params;
+  console.log(category);
+
   return (
     <>
       <div className="p-5 rounded-xl col-span-12 lg:col-span-9 min-h-screen">
@@ -19,4 +22,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -52,17 +52,17 @@ const MobileMenu = () => {
           </li>
           <li
             className={`mobile-menu-items ${
-              pathname === "/about-us" && "bg-[#5e17eb] text-white"
+              pathname === "/about" && "bg-[#5e17eb] text-white"
             }`}
           >
-            <Link href="/about-us">About Us</Link>
+            <Link href="/about">About Us</Link>
           </li>
           <li
             className={`mobile-menu-items ${
-              pathname === "/contact-us" && "bg-[#5e17eb] text-white"
+              pathname === "/contact" && "bg-[#5e17eb] text-white"
             }`}
           >
-            <Link href="/contact-us">Contact Us</Link>
+            <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>

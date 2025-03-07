@@ -8,7 +8,6 @@ import SearchForm from "./Navbar/SearchForm";
 const Navbar = () => {
   const pathname = usePathname();
 
-
   return (
     <nav className=" bg-white shadow-md sticky top-0 z-[9999]">
       <div className="container">
@@ -43,21 +42,21 @@ const Navbar = () => {
                   pathname === "/popular-blogs" && "bg-[#5e17eb] text-white"
                 }`}
               >
-                <Link href="/">Popular Blogs</Link>
+                <Link href="/popular-blogs">Popular Blogs</Link>
               </li>
               <li
                 className={`menu-items ${
-                  pathname === "/about-us" && "bg-[#5e17eb] text-white"
+                  pathname === "/about" && "bg-[#5e17eb] text-white"
                 }`}
               >
-                <Link href="/">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li
                 className={`menu-items ${
-                  pathname === "/contact-us" && "bg-[#5e17eb] text-white"
+                  pathname === "/contact" && "bg-[#5e17eb] text-white"
                 }`}
               >
-                <Link href="/">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
             <SearchForm />

@@ -6,7 +6,7 @@ import { MdAccessTime } from "react-icons/md";
 const PostCard = () => {
   return (
     <div className="col-span-12 md:col-span-6 shadow-md mb-5 md:mb-0">
-      <Link href="/">
+      <Link href="/blogs/technology/1">
         <Image
           src="/post.png"
           width={3400}
@@ -17,7 +17,7 @@ const PostCard = () => {
       </Link>
       <div className="bg-white px-5 py-3 rounded-b-xl">
         <Link
-          href="/"
+          href="/blogs/technology/"
           className="flex gap-2 justify-center items-center bg-[#eff1f4] px-3 py-2 w-[130px] text-black text-sm"
         >
           <FaHashtag className="text-[#5e17eb] text-xl" />
@@ -27,7 +27,7 @@ const PostCard = () => {
           href="/"
           className="mt-3 mb-2 text-2xl font-semibold hover:text-[#5e17eb] cursor-pointer"
         >
-          <Link href="/">
+          <Link href="/blogs/technology/1">
             Empowering Healthcare Industry: How Virtual Reality
           </Link>
         </h2>

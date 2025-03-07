@@ -4,7 +4,7 @@ import Link from "next/link";
 const RelatedPost = () => {
   return (
     <div className="col-span-12 md:col-span-4">
-      <Link href="/" className="group w-full">
+      <Link href="/blogs/technology/1" className="group w-full">
         <Image
           src="/post.png"
           alt="Post png"

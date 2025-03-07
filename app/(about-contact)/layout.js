@@ -1,8 +1,9 @@
 import AdsBar from "@/components/AdsBar";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
-const Layout = ({ children }) => {
+const layout = ({ children }) => {
   return (
     <>
       <Navbar />
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
         <AdsBar />
         <section className="container grid grid-cols-12 gap-5 py-10 relative">
           {children}
+          <Sidebar />
         </section>
         <AdsBar />
       </main>
@@ -18,4 +20,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default layout;

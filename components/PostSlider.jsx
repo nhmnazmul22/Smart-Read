@@ -5,7 +5,7 @@ import { FaHashtag } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const PostSlider = () => {
@@ -22,11 +22,11 @@ const PostSlider = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <Link href="/" className="slider-overlay rounded-xl">
+          <Link href="/blogs/technology/1" className="slider-overlay rounded-xl">
             <Image
               src="/slide-img.jpg"
               width={1024}
@@ -49,7 +49,7 @@ const PostSlider = () => {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="/" className="slider-overlay rounded-xl">
+          <Link href="/blogs/technology/1" className="slider-overlay rounded-xl">
             <Image
               src="/slide-img.jpg"
               width={1024}
@@ -72,7 +72,7 @@ const PostSlider = () => {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href="/" className="slider-overlay rounded-xl">
+          <Link href="/blogs/technology/1" className="slider-overlay rounded-xl">
             <Image
               src="/slide-img.jpg"
               width={1024}
