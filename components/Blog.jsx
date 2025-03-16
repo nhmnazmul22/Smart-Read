@@ -15,10 +15,7 @@ import {
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
 
-const Page = async ({ params }) => {
-  const { category, blogId } = await params;
-
-  console.log(category, blogId);
+const Blog = () => {
   return (
     <div className="bg-white p-5 rounded-xl shadow-lg col-span-12 min-h-screen">
       <p className="text-[12px] text-gray-400">
@@ -193,4 +190,4 @@ const Page = async ({ params }) => {
   );
 };
 
-export default Page;
+export default Blog;
